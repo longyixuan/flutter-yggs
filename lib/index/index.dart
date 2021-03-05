@@ -9,7 +9,6 @@ import 'navigation_icon_view.dart'; // 如果是在同一个包的路径下，�
 
 // 创建一个 带有状态的 Widget Index
 class Index extends StatefulWidget {
-
   //  固定的写法
   @override
   State<StatefulWidget> createState()  => new _IndexState();
@@ -80,7 +79,7 @@ class _IndexState extends State<Index> with TickerProviderStateMixin{
     return new MaterialApp(
         home: new Scaffold(
           body: new Center(
-              child: _currentPage   // 动态的展示我们当前的页面
+              child: _currentPage  // 动态的展示我们当前的页面
           ),
           bottomNavigationBar: bottomNavigationBar,   // 底部工具栏
         ),

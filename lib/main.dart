@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:yggs/index/index.dart';
+import 'package:flutter/foundation.dart' show debugDefaultTargetPlatformOverride;
 
 void main() {
+  debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;//打包
   runApp(new MyApp());
 }
 
