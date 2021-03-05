@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yggs/views/index.dart';
+import 'package:yggs/index/index.dart';
 
 void main() {
   runApp(new MyApp());
@@ -10,11 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '员工工时',
+      title: '会议室预定',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: MyHomePage(title: '员工工时'),
+      home: new Index(),
     );
   }
 }
