@@ -1,24 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:yggs/component/color.dart';
-class IdeaPage extends StatefulWidget{
+class NoticePage extends StatefulWidget{
   @override
-  State<StatefulWidget> createState() => new _IdeaPageState();
+  State<StatefulWidget> createState() => new _NoticePageState();
 }
-class _IdeaPageState extends State<IdeaPage> {
-
+class _NoticePageState extends State<NoticePage> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       home: new Scaffold(
         appBar: new AppBar(
-          title: new Text('我的会议'),
-          actions: <Widget>[
-            new Container()
-          ],
-        ),
-        body: new Center(
-          child: null,
-        ),
+          title: new Text('消息'),
+          // 后面的省略
+          // ......
+        )
       ),
       theme: new ThemeData(
         primarySwatch: createMaterialColor(Color(0xFF046ABA)),   // 设置主题颜色

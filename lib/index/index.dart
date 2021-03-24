@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-// import 'package:yggs/NoticePage/notice_page.dart';
+import 'package:yggs/noticepage/notice_page.dart';
 import 'package:yggs/home/home_page.dart';
 import 'package:yggs/idea/idea_page.dart';
 import 'package:yggs/market/market_page.dart';
 import 'package:yggs/my/my_page.dart';
-
+import 'package:yggs/component/color.dart';
 import 'navigation_icon_view.dart'; // 如果是在同一个包的路径下，可以直接使用对应的文件名
 
 // 创建一个 带有状态的 Widget Index
@@ -33,11 +33,11 @@ class _IndexState extends State<Index> with TickerProviderStateMixin{
 
     // 初始化导航图标
     _navigationViews = <NavigationIconView>[
-      new NavigationIconView(icon: new Icon(Icons.assessment), title: new Text("首页"), vsync: this), // vsync 默认属性和参数
-      new NavigationIconView(icon: new Icon(Icons.all_inclusive), title: new Text("想法"), vsync: this),
-      new NavigationIconView(icon: new Icon(Icons.add_shopping_cart), title: new Text("市场"), vsync: this),
-      new NavigationIconView(icon: new Icon(Icons.add_alert), title: new Text("通知"), vsync: this),
-      new NavigationIconView(icon: new Icon(Icons.perm_identity), title: new Text("我的"), vsync: this),
+      new NavigationIconView(icon: new Icon(Icons.home), title: new Text("首页"), vsync: this), // vsync 默认属性和参数
+      new NavigationIconView(icon: new Icon(Icons.comment), title: new Text("我的会议"), vsync: this),
+      new NavigationIconView(icon: new Icon(Icons.comment), title: new Text("全部会议"), vsync: this),
+      new NavigationIconView(icon: new Icon(Icons.add_alert), title: new Text("消息"), vsync: this),
+      new NavigationIconView(icon: new Icon(Icons.person), title: new Text("我的"), vsync: this),
     ];
 
     // 给每一个按钮区域加上监听
@@ -50,7 +50,7 @@ class _IndexState extends State<Index> with TickerProviderStateMixin{
       new HomePage(),
       new IdeaPage(),
       new MarketPage(),
-      // new NoticePage(),
+      new NoticePage(),
       new MyPage()
     ];
     _currentPage = _pageList[_currentIndex];
@@ -85,7 +85,7 @@ class _IndexState extends State<Index> with TickerProviderStateMixin{
         ),
 
       theme: new ThemeData(
-        primarySwatch: Colors.blue,   // 设置主题颜色
+        primarySwatch: createMaterialColor(Color(0xFF046ABA)),   // 设置主题颜色
       ),
 
     );

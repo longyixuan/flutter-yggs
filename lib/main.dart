@@ -13,9 +13,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '会议室预定',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
       home: new Index(),
     );
   }
