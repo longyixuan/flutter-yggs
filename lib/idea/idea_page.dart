@@ -1,27 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:yggs/component/color.dart';
-class IdeaPage extends StatefulWidget{
+
+class IdeaPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => new _IdeaPageState();
 }
-class _IdeaPageState extends State<IdeaPage> {
 
+class _IdeaPageState extends State<IdeaPage> {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Scaffold(
+    return new DefaultTabController(
+      length: 3,
+      child: new Scaffold(
         appBar: new AppBar(
-          title: new Text('我的会议'),
-          actions: <Widget>[
-            new Container()
-          ],
+          title: Center(
+            child: Text(
+              '会议室预定',
+              textAlign: TextAlign.center,
+            ),
+          ),
+          actions: <Widget>[new Container()],
+          bottom: TabBar(
+            indicatorColor: Colors.white,
+            tabs: <Widget>[
+              Tab(
+                text: '未开始',
+              ),
+              Tab(
+                text: '已结束',
+              ),
+              Tab(
+                text: '已取消',
+              ),
+            ],
+          ),
         ),
-        body: new Center(
-          child: null,
+        body: TabBarView(
+          children: <Widget>[Text('未开始'), Text('已结束'), Text('已取消')],
         ),
-      ),
-      theme: new ThemeData(
-        primarySwatch: createMaterialColor(Color(0xFF046ABA)),   // 设置主题颜色
       ),
     );
   }
