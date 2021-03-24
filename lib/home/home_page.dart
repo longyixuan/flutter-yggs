@@ -12,7 +12,12 @@ class _HomePageState extends State<HomePage> {
     return new MaterialApp(
       home: new Scaffold(
         appBar: new AppBar(
-          title: new Text('首页'),
+          title: Center(
+            child: Text(
+              '会议室预定',
+              textAlign: TextAlign.center,
+            ),
+          ),
           actions: <Widget>[
             new Container()
           ],
