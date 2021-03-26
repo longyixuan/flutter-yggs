@@ -77,6 +77,7 @@ class _IndexState extends State<Index> with TickerProviderStateMixin{
     );
 
     return new MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: new Scaffold(
           body: new Center(
               child: _currentPage  // 动态的展示我们当前的页面

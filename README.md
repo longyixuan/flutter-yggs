@@ -1,5 +1,13 @@
 # 笔记
 
+### 启动
+
+```bash
+flutter run -d chrome //谷歌浏览器
+hover run //window
+hover run build
+```
+
 ## 加载图片
 
 1、在pubspec.yaml中的flutter部分添加如下内容
